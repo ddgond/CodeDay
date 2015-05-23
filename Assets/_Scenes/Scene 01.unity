@@ -201,7 +201,7 @@ GameObject:
   - 92: {fileID: 365755437}
   - 124: {fileID: 365755436}
   - 81: {fileID: 365755435}
-  - 114: {fileID: 365755440}
+  - 114: {fileID: 472676143}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -274,9 +274,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-<<<<<<< HEAD
---- !u!114 &365755440
-=======
 --- !u!1 &472676142
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +282,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 472676144}
-  - 114: {fileID: 472676143}
+  - 114: {fileID: 472676145}
   m_Layer: 0
   m_Name: GravityController
   m_TagString: Untagged
@@ -294,25 +291,21 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &472676143
->>>>>>> origin/master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 365755434}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67ca9928590937b46bd54d32f237003c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
   m_GameObject: {fileID: 472676142}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a73dd43ea7334b0d9c21d55cbca5f8a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
   maxGravity: 3
   gravityChangeMultiplier: .200000003
   smoothing: 1
@@ -328,4 +321,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
->>>>>>> origin/master
+--- !u!114 &472676145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 472676142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a73dd43ea7334b0d9c21d55cbca5f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxGravity: 3
+  gravityChangeMultiplier: .200000003
+  smoothing: 1
