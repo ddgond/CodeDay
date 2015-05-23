@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Mover : MonoBehaviour {
-
+	public int damage = 20;
 	public float speed = 5;
 	public GameObject explosion;
 	[HideInInspector] public string spawnedBy;
@@ -23,6 +23,9 @@ public class Mover : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if (other.name != spawnedBy) {
 			if (!exploded) {
+				if(other.name == "Player"){
+					other.GetComponent<PlayerController>().TakeDamage (damage);
+				}
 				GameObject exp = Instantiate (explosion, transform.position, transform.rotation) as GameObject;
 				Destroy (exp, 0.1f);
 			}

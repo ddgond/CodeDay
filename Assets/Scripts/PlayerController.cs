@@ -6,15 +6,24 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody rb;
 	public GameObject shot;
 	public float fireRate;
-	
+	public int health = 100;
 	private float nextFire;
 
 	void Start ()
 	{
 
 	}
+
+	public void TakeDamage (int damage){
+		health -= damage;
+
+	}
+
 	void Update ()
 	{
+		if (health == 0) {
+			Destroy(gameObject);
+		}
 		if (Input.GetButton("Fire1") && Time.time > nextFire)
 		{
 			nextFire = Time.time + fireRate;
