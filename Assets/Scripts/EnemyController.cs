@@ -19,6 +19,7 @@ public class EnemyController : MonoBehaviour {
 			timeSinceFire = 0f;
 			GameObject thisShot = Instantiate(shot, transform.position, transform.rotation) as GameObject;
 			thisShot.GetComponent<Mover>().Target(player);
+			thisShot.GetComponent<Mover>().spawnedBy = gameObject.name;
 		}
 	}
 }
