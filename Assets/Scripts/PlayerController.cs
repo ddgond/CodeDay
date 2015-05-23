@@ -5,7 +5,6 @@ public class PlayerController : MonoBehaviour {
 
 	private Rigidbody rb;
 	public GameObject shot;
-	public Transform shotSpawn;
 	public float fireRate;
 	
 	private float nextFire;
