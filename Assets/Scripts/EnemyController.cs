@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyController : MonoBehaviour {
 
 	public float fireRate = 2f;
+	public int health = 40;
 	public GameObject shot;
 
 	private float timeSinceFire = 0f;
@@ -24,5 +25,11 @@ public class EnemyController : MonoBehaviour {
 				thisShot.GetComponent<Mover>().spawnedBy = gameObject.name;
 			}
 		}
+	}
+
+	public void TakeDamage (int damage) {
+		health -= damage;
+		if (health <= 0)
+			Destroy (gameObject);
 	}
 }

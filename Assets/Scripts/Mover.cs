@@ -26,10 +26,13 @@ public class Mover : MonoBehaviour {
 				if(other.name == "Player"){
 					other.GetComponent<PlayerController>().TakeDamage (damage);
 				}
+				if(other.tag == "Enemy"){
+					other.GetComponent<EnemyController>().TakeDamage (damage);
+				}
 				GameObject exp = Instantiate (explosion, transform.position, transform.rotation) as GameObject;
 				Destroy (exp, 0.1f);
 			}
-			Destroy (gameObject, 0.1f);
+			Destroy (gameObject);
 			exploded = true;
 		}
 	}
