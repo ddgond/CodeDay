@@ -971,8 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bcd8203f576d443af75e227044f985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shot: {fileID: 156294, guid: 3b48a00f60837fd4d8bcca2c5ce5c4b5, type: 2}
-  shotSpawn: {fileID: 0}
+  shot: {fileID: 119424, guid: 9ddeeca6b8aeb3a4d9a949ec949c0ea6, type: 2}
   fireRate: .5
 --- !u!54 &2110660303
 Rigidbody:

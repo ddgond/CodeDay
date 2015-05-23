@@ -16,6 +16,10 @@ public class Mover : MonoBehaviour {
 		spawnedBy = null;
 	}
 
+	void Update () {
+		transform.rotation = Quaternion.LookRotation (rb.velocity) * Quaternion.Euler (0, 90, 90);
+	}
+
 	void OnTriggerEnter (Collider other) {
 		if (other.name != spawnedBy) {
 			if (!exploded) {
