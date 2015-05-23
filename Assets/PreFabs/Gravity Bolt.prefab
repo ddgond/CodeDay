@@ -131,6 +131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  explosion: {fileID: 128670, guid: 54199de6763563f408adbfd422c6a979, type: 2}
+  spawnedBy: 
 --- !u!136 &13692092
 CapsuleCollider:
   m_ObjectHideFlags: 1

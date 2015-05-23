@@ -8,6 +8,7 @@ public class Mover : MonoBehaviour {
 	[HideInInspector] public string spawnedBy;
 
 	private Rigidbody rb;
+	private bool exploded;
 
 	void Awake () {
 		rb = GetComponent<Rigidbody> ();
@@ -16,9 +17,12 @@ public class Mover : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider other) {
-		if (other.name != spawnedBy)
-			Instantiate(explosion, transform.position, transform.rotation);
+		if (other.name != spawnedBy) {
+			if (!exploded)
+				Instantiate (explosion, transform.position, transform.rotation);
 			Destroy (gameObject, 0.1f);
+			exploded = true;
+		}
 	}
 
 	public void Target (GameObject target) {
