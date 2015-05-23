@@ -4,6 +4,7 @@ using System.Collections;
 public class Mover : MonoBehaviour {
 
 	public float speed = 5;
+	public GameObject explosion;
 	[HideInInspector] public string spawnedBy;
 
 	private Rigidbody rb;
@@ -16,6 +17,7 @@ public class Mover : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 		if (other.name != spawnedBy)
+			Instantiate(explosion, transform.position, transform.rotation);
 			Destroy (gameObject, 0.1f);
 	}
 
