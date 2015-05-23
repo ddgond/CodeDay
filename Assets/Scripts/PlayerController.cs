@@ -2,17 +2,14 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-<<<<<<< HEAD
 
-	public float speed = 5f;
 	private Rigidbody rb;
 	public GameObject shot;
 	public Transform shotSpawn;
 	public float fireRate;
-=======
->>>>>>> origin/master
 	
 	private float nextFire;
+
 	void Start ()
 	{
 
