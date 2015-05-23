@@ -2,17 +2,20 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
+<<<<<<< HEAD
 
 	public float speed = 5f;
 	private Rigidbody rb;
 	public GameObject shot;
 	public Transform shotSpawn;
 	public float fireRate;
+=======
+>>>>>>> origin/master
 	
 	private float nextFire;
 	void Start ()
 	{
-		rb = GetComponent<Rigidbody>();
+
 	}
 	void Update ()
 	{
@@ -25,10 +28,6 @@ public class PlayerController : MonoBehaviour {
 	
 	void FixedUpdate ()
 	{
-		float moveHorizontal = Input.GetAxis ("Horizontal");
 
-		Vector3 movement = new Vector3 (moveHorizontal * speed, rb.velocity.y, 0.0f);
-		
-		rb.velocity = movement;
 	}
 }

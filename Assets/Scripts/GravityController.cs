@@ -3,9 +3,7 @@ using System.Collections;
 
 public class GravityController : MonoBehaviour {
 
-	public float maxGravity = 3f;
-	public float gravityChangeMultiplier = 0.2f;
-	public float smoothing = 1f;
+	public float gravityMultiplier = 3f;
 
 	void Start () {
 		Physics.gravity = Vector3.zero;
@@ -17,9 +15,10 @@ public class GravityController : MonoBehaviour {
 		float horizontal = Input.GetAxis ("Horizontal");
 		float vertical = Input.GetAxis ("Vertical");
 
-		Vector3 newGravity = Vector3.ClampMagnitude (Physics.gravity + new Vector3 (horizontal * gravityChangeMultiplier, vertical * gravityChangeMultiplier, 0f), maxGravity);
+		Vector3 newGravity = new Vector3 (horizontal, vertical, 0f).normalized * gravityMultiplier;
 
-		Physics.gravity = Vector3.Lerp (Physics.gravity, newGravity, smoothing);
+		Physics.gravity = newGravity;
 		Physics2D.gravity = Physics.gravity;
 	}
+	 
 }
