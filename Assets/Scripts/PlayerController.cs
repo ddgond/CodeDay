@@ -19,7 +19,9 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButton("Fire1") && Time.time > nextFire)
 		{
 			nextFire = Time.time + fireRate;
-			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+			/*GameObject */thisShot = Instantiate(shot, shotSpawn.position, shotSpawn.rotation) /*as GameObject*/;
+			/*thisShot.GetComponent<Mover>().Target(Input.mouse);
+			thisShot.GetComponent<Mover>().spawnedBy = gameObject.name;*/
 		}
 	}
 	
