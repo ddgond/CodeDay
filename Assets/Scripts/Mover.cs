@@ -18,8 +18,10 @@ public class Mover : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 		if (other.name != spawnedBy) {
-			if (!exploded)
-				Instantiate (explosion, transform.position, transform.rotation);
+			if (!exploded) {
+				GameObject exp = Instantiate (explosion, transform.position, transform.rotation) as GameObject;
+				Destroy (exp, 0.1f);
+			}
 			Destroy (gameObject, 0.1f);
 			exploded = true;
 		}
@@ -28,6 +30,11 @@ public class Mover : MonoBehaviour {
 	public void Target (GameObject target) {
 		transform.rotation = Quaternion.LookRotation (target.transform.position - transform.position) * Quaternion.Euler (0, 90, 90);
 		rb.velocity = (target.transform.position - transform.position).normalized * speed;
+	}
+
+	public void Target (Vector3 targetPosition) {
+		transform.rotation = Quaternion.LookRotation (targetPosition - transform.position) * Quaternion.Euler (0, 90, 90);
+		rb.velocity = (targetPosition - transform.position).normalized * speed;
 	}
 
 }
