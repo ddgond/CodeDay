@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 156294, guid: 3b48a00f60837fd4d8bcca2c5ce5c4b5, type: 2}
   shotSpawn: {fileID: 2038991059}
-  fireRate: .5
+  fireRate: .200000003
 --- !u!1 &365755434
 GameObject:
   m_ObjectHideFlags: 0
