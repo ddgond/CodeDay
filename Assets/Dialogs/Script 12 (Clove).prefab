@@ -54,10 +54,10 @@ MonoBehaviour:
   - Failure is not an option.
   - 'Eradicate them at all costs. '
   speaker: Clove
-  nextDialog: {fileID: 0}
+  nextDialog: {fileID: 192106, guid: 65792f673f2f24792b2e7f8b68363f3f, type: 2}
   delay: .400000006
   autoAdvance: 0
-  speakerSprite: {fileID: 21300000, guid: 1c371e381b4dc45ab9df25403b35703a, type: 3}
+  speakerSprite: {fileID: 21300000, guid: 45b153163abf04ff59ff30d66c7cca9f, type: 3}
   card: {fileID: 0}
   cardDisplayTime: 5
 --- !u!1001 &100100000

@@ -62,7 +62,7 @@ MonoBehaviour:
   nextDialog: {fileID: 192106, guid: 8deb6ebad70dd4331815402dcc016c4b, type: 2}
   delay: .400000006
   autoAdvance: 0
-  speakerSprite: {fileID: 21300000, guid: 1c371e381b4dc45ab9df25403b35703a, type: 3}
+  speakerSprite: {fileID: 21300000, guid: 45b153163abf04ff59ff30d66c7cca9f, type: 3}
   card: {fileID: 0}
   cardDisplayTime: 0
 --- !u!1001 &100100000
