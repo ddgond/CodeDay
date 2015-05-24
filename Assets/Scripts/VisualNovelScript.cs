@@ -21,6 +21,8 @@ public class VisualNovelScript : MonoBehaviour {
 	private Image character;
 	private float cardTimePassed;
 	private bool cardDisplaying = false;
+	private bool fading = false;
+	private float startTime;
 
 	void Awake () {
 		dialog = GameObject.Find ("Dialog").GetComponent<Text> ();
@@ -34,11 +36,17 @@ public class VisualNovelScript : MonoBehaviour {
 		cardTimePassed = 0f;
 		dialog.text = dialogLines[index];
 		speak.text = speaker;
+		character.sprite = speakerSprite;
 	}
 	
 
 	void Update () {
 		timePassed += Time.deltaTime;
+		if (fading) {
+			if (Time.time - startTime >= 1) {
+				Application.LoadLevel("Stage 01");
+			}
+		}
 		if (card != null) {
 			if (cardDisplaying) {
 				cardTimePassed += Time.deltaTime;
@@ -90,7 +98,7 @@ public class VisualNovelScript : MonoBehaviour {
 				nextDialog = next.nextDialog;
 				autoAdvance = next.autoAdvance;
 				speakerSprite = next.speakerSprite;
-				character.sprite = speakerSprite;
+				character.sprite = next.speakerSprite;
 				delay = next.delay;
 				timePassed = 0f;
 				cardTimePassed = 0f;
@@ -109,6 +117,7 @@ public class VisualNovelScript : MonoBehaviour {
 	void FadeOut () {
 		Image characterSprite = GameObject.Find ("Character").GetComponent<Image> ();
 		characterSprite.CrossFadeAlpha (0, 1, false);
-
+		fading = true;
+		startTime = Time.time;
 	}
 }
