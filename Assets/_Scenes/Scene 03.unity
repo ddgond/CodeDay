@@ -689,6 +689,7 @@ MonoBehaviour:
   AGshot: {fileID: 156294, guid: 3b48a00f60837fd4d8bcca2c5ce5c4b5, type: 2}
   fireRate: .25
   health: 100
+  right: {fileID: 21300000, guid: 37652c939b6c2704ea31d64560cb9032, type: 3}
 --- !u!54 &1255365380
 Rigidbody:
   m_ObjectHideFlags: 0

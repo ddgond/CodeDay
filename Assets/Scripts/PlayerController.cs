@@ -8,10 +8,15 @@ public class PlayerController : MonoBehaviour {
 	public GameObject AGshot;
 	public float fireRate;
 	public int health = 100;
+	public Sprite right;
 	private float nextFire;
+	private bool left = true;
+	private bool movedYet = false;
 
 	void Start ()
 	{
+		rb = GetComponent<Rigidbody> ();
+	//	GetComponent<SpriteRenderer> ().sprite = right; 
 
 	}
 
@@ -30,6 +35,18 @@ public class PlayerController : MonoBehaviour {
 			GameObject.Find ("GameController").GetComponent <GameOverScript> ().GameOver ();
 			Destroy(gameObject);
 		}
+		if (rb.velocity.x > 0f && (left||movedYet)) {
+			left = false;
+			movedYet = false;
+			transform.localScale = new Vector3(2*transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			GetComponent<SpriteRenderer> ().sprite = right; 
+		} else if (rb.velocity.x < 0f && (!left||movedYet)) {
+			left = true;
+			movedYet = false;
+			transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			GetComponent<SpriteRenderer> ().sprite = right;
+		}
+
 		if (Input.GetButton("Fire1") && Time.time > nextFire)
 		{
 			nextFire = Time.time + fireRate;
