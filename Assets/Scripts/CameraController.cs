@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour {
 	private Rigidbody rb;
 	private Vector3 velocity;
 	private float z;
-	
+
 	void Awake () {
 		player = GameObject.Find ("Player");
 		rb = gameObject.GetComponent<Rigidbody> ();
@@ -24,8 +24,9 @@ public class CameraController : MonoBehaviour {
 	void LateUpdate () {
 		velocity = rb.velocity;
 		Follow ();
+
 	}
-	
+
 	void Follow () {
 		if (player != null) {
 			if (smoothDamp) {
