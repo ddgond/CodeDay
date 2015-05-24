@@ -31,7 +31,9 @@ public class EnemyController : MonoBehaviour {
 
 	public void TakeDamage (int damage) {
 		health -= damage;
-		if (health <= 0)
+		if (health <= 0) {
+			GameObject.Find ("GameController").GetComponent<GameOverScript> ().enemyKilled();
 			Destroy (gameObject);
+		}
 	}
 }

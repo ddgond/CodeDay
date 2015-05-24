@@ -1,14 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameOverScript : MonoBehaviour {
 
 	public GameObject gameOver;
+	public GameObject win;
 	[HideInInspector] public bool gameEnded = false;
 
 	private bool restartable;
+	private int enemyCount;
 
-	// Use this for initialization
+	void Awake () {
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag ("Enemy");
+		enemyCount = enemies.Length;
+	}
+
 	void Start () {
 		restartable = false;
 	}
@@ -18,11 +25,28 @@ public class GameOverScript : MonoBehaviour {
 		if (restartable && Input.GetKey (KeyCode.Space)) {
 			Application.LoadLevel(Application.loadedLevel);
 		}
+		if (enemyCount <= 0) {
+			Win ();
+		}
 	}
 
 	public void GameOver () {
-		gameEnded = true;
-		Instantiate (gameOver);
-		restartable = true;
+		if (!gameEnded) {
+			gameEnded = true;
+			Instantiate (gameOver);
+			restartable = true;
+		}
+	}
+
+	public void enemyKilled () {
+		enemyCount--;
+	}
+
+	void Win () {
+		if (!gameEnded) {
+			gameEnded = true;
+			Instantiate (win);
+			restartable = true;
+		}
 	}
 }
