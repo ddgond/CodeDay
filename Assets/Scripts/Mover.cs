@@ -23,6 +23,7 @@ public class Mover : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if (other.name != spawnedBy) {
 			if(other.tag == "Player"){
+				Debug.Log (true);
 				other.GetComponent<PlayerController>().TakeDamage (damage);
 			}
 			if(other.tag == "Enemy" && spawnedBy == "Player"){
