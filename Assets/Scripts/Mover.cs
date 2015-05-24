@@ -22,18 +22,18 @@ public class Mover : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 		if (other.name != spawnedBy) {
-			if (!exploded) {
-				if(other.tag == "Player"){
-					other.GetComponent<PlayerController>().TakeDamage (damage);
-				}
-				if(other.tag == "Enemy" && spawnedBy == "Player"){
-					other.GetComponent<EnemyController>().TakeDamage (damage);
-				}
-				GameObject exp = Instantiate (explosion, transform.position, transform.rotation) as GameObject;
-				Destroy (exp, 0.1f);
+			if(other.tag == "Player"){
+				other.GetComponent<PlayerController>().TakeDamage (damage);
 			}
+			if(other.tag == "Enemy" && spawnedBy == "Player"){
+				other.GetComponent<EnemyController>().TakeDamage (damage);
+			}
+			GameObject exp = Instantiate (explosion, transform.position, transform.rotation) as GameObject;
+			Destroy (exp, 0.1f);
+
+
 			Destroy (gameObject);
-			exploded = true;
+			//exploded = true;
 		}
 	}
 
