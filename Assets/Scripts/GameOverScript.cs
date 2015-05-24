@@ -4,6 +4,7 @@ using System.Collections;
 public class GameOverScript : MonoBehaviour {
 
 	public GameObject gameOver;
+	[HideInInspector] public bool gameEnded = false;
 
 	private bool restartable;
 
@@ -20,6 +21,7 @@ public class GameOverScript : MonoBehaviour {
 	}
 
 	public void GameOver () {
+		gameEnded = true;
 		Instantiate (gameOver);
 		restartable = true;
 	}

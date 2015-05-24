@@ -15,6 +15,8 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	void Update () {
+		if (GameObject.Find ("GameController").GetComponent<GameOverScript> ().gameEnded)
+			gameObject.SetActive (false);
 		timeSinceFire += Time.deltaTime;
 		if (timeSinceFire > fireRate) {
 			timeSinceFire = 0f;

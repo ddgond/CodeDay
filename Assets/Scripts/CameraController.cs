@@ -33,7 +33,7 @@ public class CameraController : MonoBehaviour {
 				transform.position = new Vector3 (transform.position.x, transform.position.y, z);
 			} else {
 				transform.position = Vector3.Lerp (transform.position, player.transform.position, smoothing);
-				transform.position = new Vector3 (transform.position.x, transform.position.y, z);
+				transform.position = new Vector3 (Mathf.Clamp(transform.position.x, -21.3f, 21.3f), Mathf.Clamp (transform.position.y,-16,16), z);
 			}
 		}
 	}
