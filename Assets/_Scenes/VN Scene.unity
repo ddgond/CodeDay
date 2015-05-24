@@ -556,6 +556,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e93d508d41749f7900373b8c067329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogLines:
+  - Press space to advance!
+  - I want to say something.
+  - I want to say it across multiple screens.
+  - I am talking right now.
+  - Visual Novel games are so cool!
+  delay: .400000006
 --- !u!1 &1701588005
 GameObject:
   m_ObjectHideFlags: 0
