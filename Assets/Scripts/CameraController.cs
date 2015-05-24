@@ -4,6 +4,7 @@ using System.Collections;
 public class CameraController : MonoBehaviour {
 
 	public float smoothing = 0.2f;
+	public bool smoothDamp = false;
 	
 	private GameObject player;
 	private Rigidbody rb;
@@ -26,7 +27,12 @@ public class CameraController : MonoBehaviour {
 	}
 	
 	void Follow () {
-		transform.position = Vector3.SmoothDamp (transform.position, player.transform.position, ref velocity, smoothing);
-		transform.position = new Vector3 (transform.position.x, transform.position.y, z);
+		if (smoothDamp) {
+			transform.position = Vector3.SmoothDamp (transform.position, player.transform.position, ref velocity, smoothing);
+			transform.position = new Vector3 (transform.position.x, transform.position.y, z);
+		} else {
+			transform.position = Vector3.Lerp (transform.position, player.transform.position, smoothing);
+			transform.position = new Vector3 (transform.position.x, transform.position.y, z);
+		}
 	}
 }
