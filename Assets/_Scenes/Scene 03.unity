@@ -369,7 +369,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 484610, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.73000002
+      value: -.170000002
       objectReference: {fileID: 0}
     - target: {fileID: 484610, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -410,6 +410,10 @@ Prefab:
     - target: {fileID: 6517832, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_Center.x
       value: -.0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 170100, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
@@ -689,7 +693,9 @@ MonoBehaviour:
   AGshot: {fileID: 156294, guid: 3b48a00f60837fd4d8bcca2c5ce5c4b5, type: 2}
   fireRate: .25
   health: 100
-  right: {fileID: 21300000, guid: 37652c939b6c2704ea31d64560cb9032, type: 3}
+  right: {fileID: 21300000, guid: 293353e2222b72b49a24d688f7209b6a, type: 3}
+  left: {fileID: 21300000, guid: 4c973d3ee8e0c3f478b10fab967f7995, type: 3}
+  middle: {fileID: 21300000, guid: a3634811ef2d046cdaaa36a6a801e5de, type: 3}
 --- !u!54 &1255365380
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -766,7 +772,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 484610, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.0999999
+      value: .150000006
       objectReference: {fileID: 0}
     - target: {fileID: 484610, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -799,6 +805,10 @@ Prefab:
     - target: {fileID: 170100, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_Name
       value: Minion 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 170100, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
@@ -1040,7 +1050,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 484610, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.09000015
+      value: .25999999
       objectReference: {fileID: 0}
     - target: {fileID: 484610, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1069,6 +1079,10 @@ Prefab:
     - target: {fileID: 170100, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_Name
       value: Minion 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 170100, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
@@ -1121,7 +1135,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 484610, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.46000004
+      value: .310000002
       objectReference: {fileID: 0}
     - target: {fileID: 484610, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1154,6 +1168,10 @@ Prefab:
     - target: {fileID: 170100, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
       propertyPath: m_Name
       value: Minion 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 170100, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d944ea49688e884d8d64738d58085c7, type: 2}
